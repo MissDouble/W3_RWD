@@ -1,0 +1,288 @@
+/* reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+
+img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 全域 border box */
+  
+  *,*::before,*::after{
+    box-sizing: border-box;
+  }
+  /* 主體 CSS */
+  .col-1{
+    max-width: 8.33%;
+  }
+  .col-2{
+    max-width: 16.66%;
+  }
+  .col-3{
+    max-width:25%;
+  }
+  .col-4{
+    max-width:33.33%;
+  }
+  .col-5{
+    max-width:41.66%;
+  }
+  .col-6{
+    max-width:50%;
+  }
+  .col-7{
+    max-width: 58.33%;
+  }
+  .col-8{
+    max-width: 66.66%;
+  }
+  .col-9{
+    max-width: 75%;
+  }
+  .col-10{
+    max-width: 83.33%;
+  }
+  .col-11{
+    max-width: 91.66%;
+  }
+  .col-12{
+    max-width: 100%;
+  }
+  .px-3{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .pr-32{
+    padding-right: 32px;
+  }
+  .pr-48{
+    padding-right: 48px;
+  }
+  .pr-64{
+    padding-right: 64px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  body{
+    font-family: 'Roboto', 'Noto Sans TC', san-serif ;
+  }
+  .bg-color-red{
+    background: #AA0601;
+  }
+  .container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-right: 12px;
+    padding-left: 12px;
+
+    @media(max-width: 768px){
+        max-width: 720px;
+    }
+    @media(max-width: 375px){
+        max-width:372px ;
+    }
+  }
+  .row{
+    margin-left: -12px;
+    margin-right: -12px;
+    display: flex;
+  }
+  .flex{
+    display: flex;
+  }
+  .header{
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .menu{
+    flex-wrap: wrap;
+  }
+  @media(max-width:375px){
+
+    .pr-64{
+      padding-right: 0;
+    }
+    .menu{
+
+      margin: 0 auto;
+      margin-top: 16px;
+    }
+    .menu li{
+      width: 50%;
+      border: 1px solid #fff;
+      text-align: center;
+      padding: 0;
+    }
+    .container{
+    }
+
+  }
+
+  .menu a{
+    color: white;
+  }
+  .link{
+    font-size: 16px;
+    line-height: 24px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+  .link a{
+    color: white;
+  }
+
+  .logo{
+    display: block;
+    width: 80px;
+    height: 49px;
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true);
+    background-size: contain;
+    text-indent: 101px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .social img{
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    @media(max-width: 768px){
+      width: 40px;
+      height: 40px;
+    }
+    @media(max-width: 375px){
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .social-pr{
+    display: block;
+    padding-right: 32px;
+
+    @media(max-width: 768px){
+      padding-right: 16px;
+    }
+    @media(max-width: 375px){
+      padding-right: 8px;
+    }
+  }
+  .footer-nav{
+    padding-bottom: 32px;
+    padding-top: 12px;
+  }
+  .contact{
+    
+  }
+  .contact a{
+    color: white;
+  }
+  .contact-info{
+    display: block;
+    font-size: 36px;
+    line-height: 1.5;
+    @media(max-width: 375px){
+      font-size: 16px;
+    }
+  }
+  .contact span:first-child{
+    padding-top: 5px;
+    padding-right: 20px;
+    font-size: 36px;
+    @media(max-width: 375px){
+      font-size: 24px;
+  
+    }
+  }
+  
+
+  .contact span:nth-child(2){
+    font-family: Noto Sans TC;
+  }
+  
+  .policy{
+    display: flex;
+  }
+  .copyright{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    justify-content: space-between;
+    color: white;
+    flex-wrap: wrap;
+  }
+  .copyright p{
+    margin-bottom: 8px;
+  }
+
+  @media(max-width: 375px){
+    .footer-nav{
+      display: none;
+    }
+    .copyright{
+      flex-direction: column;
+    }
+    .policy{
+      display: block;
+    }
+
+    .copyright li{
+      margin-bottom: 8px;
+    }
+  }
