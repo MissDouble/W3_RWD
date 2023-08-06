@@ -52,8 +52,11 @@ table {
 img{
     max-width: 100%;
     height: auto;
+    display: block;
   }
-  
+body{
+  line-height: 1.5;
+}
   /* 全域 border box */
   
   *,*::before,*::after{
@@ -61,40 +64,40 @@ img{
   }
   /* 主體 CSS */
   .col-1{
-    max-width: 8.33%;
+    width: 8.33%;
   }
   .col-2{
-    max-width: 16.66%;
+    width: 16.66%;
   }
   .col-3{
-    max-width:25%;
+    width:25%;
   }
   .col-4{
-    max-width:33.33%;
+    width:33.33%;
   }
   .col-5{
-    max-width:41.66%;
+    width:41.66%;
   }
   .col-6{
-    max-width:50%;
+    width:50%;
   }
   .col-7{
-    max-width: 58.33%;
+    width: 58.33%;
   }
   .col-8{
-    max-width: 66.66%;
+    width: 66.66%;
   }
   .col-9{
-    max-width: 75%;
+    width: 75%;
   }
   .col-10{
-    max-width: 83.33%;
+    width: 83.33%;
   }
   .col-11{
-    max-width: 91.66%;
+    width: 91.66%;
   }
   .col-12{
-    max-width: 100%;
+    width: 100%;
   }
   .px-3{
     padding-left: 12px;
@@ -108,6 +111,9 @@ img{
   }
   .pr-64{
     padding-right: 64px;
+  }
+  .pb-24{
+    padding-bottom: 24px;
   }
 
   a{
@@ -124,13 +130,12 @@ img{
     margin: 0 auto;
     padding-right: 12px;
     padding-left: 12px;
-
     @media(max-width: 768px){
-        max-width: 720px;
+      max-width: 720px;
     }
     @media(max-width: 375px){
-        max-width:372px ;
-    }
+      max-width: 372px;
+  }
   }
   .row{
     margin-left: -12px;
@@ -142,34 +147,49 @@ img{
   }
   .header{
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     font-size: 20px;
-    line-height: 1.5;
     color: white;
     padding-top: 16px;
     padding-bottom: 16px;
     flex-wrap: wrap;
+
+    @media (max-width:768px){
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+      padding-bottom: 0;
+    }
   }
   .menu{
     flex-wrap: wrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
-  @media(max-width:375px){
+  @media(max-width:768px){
 
     .pr-64{
       padding-right: 0;
     }
     .menu{
 
-      margin: 0 auto;
+      /* margin: 0 auto; */
       margin-top: 16px;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 16px;
+
     }
     .menu li{
       width: 50%;
       border: 1px solid #fff;
       text-align: center;
-      padding: 0;
+      /* padding: 0; */
     }
-    .container{
+    .nav-item{
+      padding-top: 12px;
+      padding-bottom: 12px;
     }
 
   }
@@ -178,8 +198,6 @@ img{
     color: white;
   }
   .link{
-    font-size: 16px;
-    line-height: 24px;
     align-items: flex-start;
     justify-content: space-between;
     padding-top: 48px;
@@ -198,9 +216,17 @@ img{
     text-indent: 101px;
     white-space: nowrap;
     overflow: hidden;
+    @media (max-width:768px){
+      margin-left: 16px;
+    }
+  }
+  .social{
+    justify-content: flex-end;
+    @media (max-width: 768px){
+      width: 168px;
+    }
   }
   .social img{
-    display: block;
     width: 48px;
     height: 48px;
 
@@ -227,26 +253,27 @@ img{
   .footer-nav{
     padding-bottom: 32px;
     padding-top: 12px;
+    @media(max-width: 705px){
+      display: none;
+    }
   }
   .contact{
-    
+
   }
-  .contact a{
+  .contact a, .policy a{
     color: white;
   }
   .contact-info{
-    display: block;
     font-size: 36px;
-    line-height: 1.5;
-    @media(max-width: 375px){
+    @media(max-width: 630px){
       font-size: 16px;
     }
   }
   .contact span:first-child{
     padding-top: 5px;
-    padding-right: 20px;
+    padding-right: 22px;
     font-size: 36px;
-    @media(max-width: 375px){
+    @media(max-width: 630px){
       font-size: 24px;
   
     }
@@ -272,9 +299,7 @@ img{
   }
 
   @media(max-width: 375px){
-    .footer-nav{
-      display: none;
-    }
+
     .copyright{
       flex-direction: column;
     }
@@ -285,4 +310,225 @@ img{
     .copyright li{
       margin-bottom: 8px;
     }
+  }
+
+  h1:hover{
+    opacity: 0.9;
+  }
+  li:hover{
+    opacity: 0.8;
+  }
+  .padding{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media (max-width:375px){
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  .section-title{
+    color: #650300;
+    text-align: center;
+    padding-bottom: 48px;
+    font-size: 48px;
+    font-weight: bold;
+    @media (max-width:375px){
+      padding-bottom: 24px;
+      font-size: 24px;
+    }
+  }
+  .bg-color-pink{
+    background-color: #FBF2F2;
+  }
+  .icon-img{
+    width: 84px;
+    margin: 0 auto;
+  }
+  .icon-title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    color: #650300;
+  }
+  .classic-img{
+    width: 416px;
+    padding-bottom: 8px;
+    
+    @media(max-width: 768px){
+      width: 336px;
+      margin: 0 auto;
+    }
+    @media(max-width: 375px){
+      width: 348px;
+    }
+  }
+
+  .item-title{
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #650300;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .bg-img{
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+    background-size: cover;
+  }
+  .white{
+    color: white;
+  }
+  .white-bg{
+    background-color: #fff;
+  }
+  /* .jointly-img{
+
+    @media(max-width:768px) {
+      max-height:100%;
+      max-width:100%;
+    }
+  } */
+  .jointly-sm-img{
+    display: none;
+  }
+
+  @media(max-width: 375px){
+    .jointly-img{
+      display: none;
+    }
+    .jointly-sm-img{
+      display: block;
+    }
+  }
+  .h-240{
+    height: 240px;
+  }
+  /* .head{
+    &-img{
+      background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+      background-size: contain;
+      text-align: right;
+      padding-top: 296px;
+      padding-bottom: 296px;
+    }
+    &-title{
+      font-size: 64px;
+    }
+    &-subtitle{
+      font-size: 36px;
+      color: #650300;
+    }
+    &-button{
+      display: block;
+      background: #650300;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+    }
+  } */
+
+  .head-img{
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+    background-size: cover;
+    background-position: 50% 50%;
+    text-align: right;
+    padding-top: 296px;
+    padding-bottom: 296px;
+    @media (max-width:375px){
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+    padding-top: 144px;
+    padding-bottom: 144px;   
+    }
+  }
+  .head-title{
+    font-size: 64px;
+    color: #650300;
+    @media (max-width:375px){
+      font-size: 24px;
+    }
+  }
+  .head-subtitle{
+    font-size: 36px;
+    color: #650300;
+    @media (max-width:375px){
+      font-size: 16px;
+    }
+  }
+  .head-button{
+    background: #650300;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 6px 12px;
+    margin-top: 4px;
+  }
+  @media (max-width:768px) {
+    .col-md-6{
+      width: 50%;
+    }
+    .col-md-12{
+      width: 100%;
+    }
+    .mb-md-24{
+      margin-bottom: 24px;
+    }
+    .row{
+      flex-wrap: wrap;
+    }
+    .md-flex-wrap{
+      flex-wrap: wrap;
+    }
+  }
+  .flex-wrap{
+    flex-wrap: wrap;
+  }
+
+  @media (max-width:375px){
+    .col-sm-12{
+      width: 100%;
+    }
+  }
+
+  .cus-div{
+    padding: 16px;
+    box-shadow: 0px 2px 6px #00000029;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+  }
+  .cus-title{
+    padding-bottom: 8px;
+  }
+  .cus-date{
+    color: #707070;
+  }
+  .form{
+    justify-content: center;
+  }
+  .font-family-form{
+    font-family: 'Roboto', 'Noto Sans TC', san-serif ;
+  }
+  .font-family{
+    font-family: 'Roboto', 'Noto Sans TC', san-serif ;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    background: none;
+    border: 1px solid #000;
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+  .checkbox{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .summit{
+    display: block;
+    background: #AA0601;
+    color: #fff;
+    padding: 16px;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 48px;
   }
